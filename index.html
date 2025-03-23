@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Documentation</title>
+  <meta charset="UTF-8">
+  <title>Employee & Branch API Documentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css">
 </head>
 <body>
-    <h1>Welcome to Employee API Documentation</h1>
-    <p>Access the OpenAPI JSON <a href="openapi.json">here</a>.</p>
+  <div id="swagger-ui"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+  <script>
+    window.onload = () => {
+      SwaggerUIBundle({
+        url: "openapi.json",
+        dom_id: "#swagger-ui"
+      });
+    };
+  </script>
 </body>
 </html>
